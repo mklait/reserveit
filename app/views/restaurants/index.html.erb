@@ -1,0 +1,44 @@
+<h1> All Restaurants </h1> <br>
+<p> Here is your list of restaurants in Boston. Some are cheap, some are pricey, they are all delicious.</p>
+
+<div class = "table">
+<table>
+
+<% for restaurant in @restaurants %>
+<tr>
+
+	<td>
+<%= restaurant.name %>
+</td>
+<td>
+<%= restaurant.cuisine%>
+</td>
+<td>
+<%= restaurant.address %>
+</td>
+<td>
+<%= restaurant.price %>
+</td>
+<td>
+<%= restaurant.rating %>
+</td>
+<td>
+<%= restaurant.telephone %>
+</td>
+<td>
+<%= link_to "Delete this restaurant", restaurant_path(id: restaurant), method: :delete, data: {confirm: "Are you certain sir?"} %>
+</td>
+<td>
+<%= link_to "View Restaurant", restaurant_path(id: restaurant) %>
+</td>
+</tr>
+<br>
+<% end %>
+</table>
+<br>
+<br>
+
+<%= link_to "Add New Restaurant", new_restaurant_path %>
+
+</div>
+

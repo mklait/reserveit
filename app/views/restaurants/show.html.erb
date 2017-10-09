@@ -1,0 +1,30 @@
+<h1> Here are the details of your chosen restaurant </h1>
+
+<div class ="name">
+	Name: <%= @restaurant.name %>
+</div>
+<div class ="cuisine">
+	Cuisine: <%= @restaurant.cuisine %>
+</div>
+<div class ="telephone">
+	Telephone: <%= @restaurant.telephone %>
+</div>
+<div class ="email">
+	Email: <%= @restaurant.email %>
+</div>
+<div class ="address">
+	Address: <%= @restaurant.address %>
+</div>
+
+</div>
+<div class ="price">
+	Price: <%= @restaurant.price %>
+</div >
+<div class ="rating">
+	Rating: <%= @restaurant.rating %>
+</div>
+
+<%= link_to "Back", restaurant_path %>
+<%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %>
+
+<%= link_to "Delete this restaurant", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you certain ?"} %>

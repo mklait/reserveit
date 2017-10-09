@@ -1,0 +1,20 @@
+<%= form_for(@restaurant) do %>
+  <%= label_tag(:name, "name") %>
+  <%= text_field_tag(:name, @restaurant.name) %> <br>
+<%= label_tag(:cuisine, "cuisine") %>
+  <%= text_field_tag(:cuisine, @restaurant.cuisine) %> <br>
+  <%= label_tag(:address, "address") %>
+  <%= text_field_tag(:address, @restaurant.address) %> <br>
+  <%= label_tag(:telephone, "telephone") %>
+  <%= text_field_tag(:telephone, @restaurant.telephone) %> <br>
+  <%= label_tag(:price, "price") %>
+  <%= text_field_tag(:price, @restaurant.price) %> <br>
+  <%= label_tag(:rating, "rating") %>
+  <%= text_field_tag(:rating, @restaurant.rating) %> <br>
+  <%= label_tag(:email, "email") %>
+  <%= text_field_tag(:email, @restaurant.email) %> <br>
+
+
+
+  <%= submit_tag("Click this button to submit form") %>
+<% end %>

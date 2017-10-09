@@ -1,0 +1,38 @@
+Add a New Restaurant!
+
+<%= form_tag(restaurants_path) do %>
+
+  <div class="field">
+
+    <%= label_tag(:name, "name") %>
+
+    <%= text_field_tag(:name) %>
+    <br>
+
+    <%= label_tag(:address, "address") %>
+
+    <%= text_field_tag(:address) %>
+    <br>
+
+    <%= label_tag(:cuisine, "cuisine") %>
+
+    <%= text_field_tag(:cuisine) %>
+     
+    <br>
+    <%= text_field_tag(:email) %>
+      <%= label_tag(:email, "email") %>
+
+      <br>
+
+    <%= text_field_tag(:price) %>
+    <%= label_tag(:price, "price") %>
+    <br>
+    <%= text_field_tag(:rating) %>
+    <%= label_tag(:rating, "rating") %>
+    <br>
+
+    <%= submit_tag("Click this button to submit form") %>
+
+  </div>
+
+<% end %>

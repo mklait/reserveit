@@ -1,0 +1,20 @@
+/*// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+
+table td {
+	border-style: solid;
+}
+
+table th {
+
+	border-style: solid;
+}
+
+.name, .cuisine, .address, .price, .rating, .telephone, .email
+p
+ {
+ 	color: purple;
+ 	font-weight: bold;
+}
