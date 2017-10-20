@@ -24,6 +24,31 @@
 	Rating: <%= @restaurant.rating %>
 </div>
 
+<p>
+	<%= link_to "Add a Reservation", new_restaurant_reservation_path(restaurant_id: @restaurant) %>
+</p>
+
+<%for reservation in @reservations do %>
+<table>
+	<tr>
+		<td>
+			<%= reservation.guestname %>
+		</td>
+
+		<td>
+			<%= reservation.TimeDate %>
+		</td>
+
+		<td>  
+			<%= reservation.guests %>
+		</td>
+
+	</tr>
+</table>
+<% end %>
+
+
+
 <%= link_to "Back", restaurant_path %>
 <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %>
 
