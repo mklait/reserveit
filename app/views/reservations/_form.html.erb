@@ -14,12 +14,12 @@
 
 <div class="field">
 	<%= form.label(:GuestName, "Name:") %>
-	<%= form.text_field(:GuestName, id: :reservation_GuestName %>
+	<%= form.text_field(:GuestName, id: :reservation_GuestName) %>
 </div>
 
 
 <div class="field">
-	<%= form.label(:guests, "Number of Guests" %>
+	<%= form.label(:guests, "Number of Guests") %>
 	<%= form.text_field :guests, id: :reservation_guests %>
 </div>
 
@@ -30,7 +30,7 @@
 
 <div class="field">
 <%= form.label(:TimeDate, "Time") %>
-<%= time_select(:resercation, :time, minute_step: 15) %>
+<%= time_select(:time, minute_step: 15) %>
 </div>
 
 <div class="actions">

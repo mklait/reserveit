@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
 	
 	before_action :authenticate_owner!, except: [:index]
-	before_action :find_restaurant, only: [:show, :edit, :destroy, :update]
+	before_action :set_restaurant, only: [:show, :edit, :destroy, :update]
 	before_action :check_correct_owner, only: [:edit, :update, :destroy]
 
 	def index
@@ -15,7 +15,6 @@ class RestaurantsController < ApplicationController
 	def create
 		@restaurant = Restaurant.new(name: params[:name], cuisine: params[:cuisine], telephone: params[:telephone], address: params[:address], price: params[:price], rating: params[:rating])
 		@restaurant.owner = current_owner
-		redirect_to restaurants_path
 
 		respond_to do |format|
 			if @restaurant.save

@@ -12,7 +12,7 @@
   <body>
   	<p class="notice"><%= notice %></p>
   	<% if !current_owner %>
-  		<div class ="sign-in-out" id ="sign-in"
+  		<div class ="sign-in-out" id ="sign-in">
   	<%= link_to "Sign In", new_owner_session_path %>
   	<% else %>
   		<div class="sign-in-out" id="sign-out">

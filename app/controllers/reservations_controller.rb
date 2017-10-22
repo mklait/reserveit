@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
 	def new
-		@restaurant = Restaurant.find(params[:restaurant_id])
+		@restaurant = Restaurant.find(params[:restaurant_id]) #capital letter = class method
 		@reservation = Reservation.new
 end
 
@@ -10,7 +10,7 @@ end
 		@reservation.restaurant = restaurant
 
 		respond_to do | format |
-			if @restaurant.save
+			if @reservation.save
 				format.html { redirect_to restaurant, notice: 'Your reservation was successful. We look forward to provding you with an excellent dining experience'}
 		else
 			format.html {render :new}

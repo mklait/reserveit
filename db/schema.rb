@@ -69,7 +69,10 @@ ActiveRecord::Schema.define(version: 20171017152143) do
     t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "owner_id"
+    t.index ["owner_id"], name: "index_restaurants_on_owner_id"
   end
 
   add_foreign_key "reservations", "restaurants"
+  add_foreign_key "restaurants", "owners"
 end
